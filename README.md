@@ -2,12 +2,9 @@ Repository for the paper *"Flexible Instance-Specific Rationalization for NLP Mo
 
 ## Prerequisites
 
-Install necessary packages by using the files  [conda_reqs.txt](https://github.com/GChrysostomou/instance-specific-rationale/blob/main/conda_reqs.txt) and  [pip_reqs.txt](https://github.com/GChrysostomou/instance-specific-rationale/blob/main/pip_reqs.txt)  
-
+Install necessary packages by using the file [requirements.yml]
 ```
-conda create --name flexi --file  conda_reqs.txt
-conda activate flexi
-pip install -r pip_reqs.txt
+conda env create -f requirements.yml
 python -m spacy download en
 ```
 
