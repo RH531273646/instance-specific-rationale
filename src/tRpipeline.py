@@ -334,9 +334,13 @@ def keep_best_model_(keep_models = False, for_rationale = False):
 
             to_rm_models = dev_stats_cleared.keys()
 
-        else:
+        elif len(dev_stats_cleared) > 1:
 
             to_rm_models, _ = zip(*sorted(dev_stats_cleared.items(), key=lambda item: item[1])[:-1])
+
+        else:
+
+            to_rm_models = []
 
         for rmvd_model in to_rm_models:
             
