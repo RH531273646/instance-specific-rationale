@@ -126,7 +126,7 @@ def extract_importance_(model, data, data_split_name, model_random_seed):
         normalised_attention_grads = torch.masked_fill(attention_gradients, ~batch["query_mask"].bool(), float("-inf"))
 
 
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
         for _i_ in range(attentions.size(0)):
 
             annotation_id = batch["annotation_id"][_i_]

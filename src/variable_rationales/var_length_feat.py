@@ -231,9 +231,9 @@ def get_rationale_metadata_(model, data_split_name, data, model_random_seed):
                 "attention_mask" : batch["attention_mask"].squeeze(1).to(device),
                 "query_mask" : batch["query_mask"].squeeze(1).to(device),
                 "special_tokens" : batch["special tokens"],
-                "retain_gradient" : True
+                "retain_gradient" : True,
             }
-            
+        
         assert batch["input_ids"].size(0) == len(batch["labels"]), "Error: batch size for item 1 not in correct position"
    
         original_prediction, _ =  model(**batch)
